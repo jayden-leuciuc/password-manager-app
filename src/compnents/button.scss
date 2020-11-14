@@ -1,5 +1,6 @@
-$primary-color: #fff;
-$secondary-color: #242424;
+:root {
+  --primary: #fff;
+}
 
 .btn {
   padding: 8px 20px;
@@ -10,17 +11,17 @@ $secondary-color: #242424;
   white-space: nowrap;
 }
 
-.btn-primary {
-  background-color: $primary-color;
-  color: $secondary-color;
-  border: 1px solid $primary-color;
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: $primary-color;
+  color: #fff;
   padding: 8px 20px;
-  border: 1px solid $primary-color;
+  border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
 }
 
@@ -28,62 +29,84 @@ $secondary-color: #242424;
   padding: 8px 20px;
   font-size: 18px;
 }
-:hover {
-  transition: all 0.3s ease-out;
-  background: $primary-color;
-  color: $secondary-color;
-}
+
 .btn--large {
   padding: 12px 26px;
   font-size: 20px;
 }
-:hover {
-  transition: all 0.3s ease-out;
-  background: $primary-color;
-  color: $secondary-color;
-}
+
 .btn--mobile {
   text-align: center;
   border-radius: 4px;
   width: 80%;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   background-color: transparent;
-  color: $secondary-color;
+  color: #fff;
   padding: 14px 20px;
-  border: 1px solid $secondary-color;
+  border: 1px solid #fff;
   transition: all 0.3s ease-out;
 }
-:hover {
-  transition: all 0.3s ease-out;
-  background: $primary-color;
-  color: $secondary-color;
-}
+
 .btn--wide {
   padding: 12px 64px;
   font-size: 20px;
 }
-:hover {
-  color: $primary-color;
-  background-color: $secondary-color;
+
+.btn--large:hover,
+.btn--medium:hover,
+.btn--mobile:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+}
+
+.btn--wide:hover {
+  color: #fff;
+  background-color: #f00946;
   transition: all 0.2s ease-out;
 }
 
+.btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.blue {
+  background-color: #276afb;
+  color: #fff;
+  border: none;
+}
+
+.red {
+  background-color: #f00946;
+  color: #fff;
+  border: none;
+}
+
 .primary {
-  color: $primary-color;
-  background-color: $secondary-color;
+  background-color: #242424;
+  color: #fff;
   border: none;
 }
-:hover {
-  color: $secondary-color;
-  background-color: $primary-color;
-}
-.secondary {
-  color: $secondary-color;
-  background-color: $primary-color;
+
+.primary:hover {
+  background-color: #fff;
+  color: #242424;
   border: none;
 }
-:hover {
-  color: $primary-color;
-  background-color: $secondary-color;
+
+.green {
+  background: #25ce4a;
+  color: #fff;
+  border: none;
+}
+
+.green:hover {
+  background-color: #242424;
 }

@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './app.scss';
 import Navbar from './compnents/Navbar';
+import Footer from './compnents/pages/Footer/Footer';
+import Home from './compnents/pages/HomePage/Home'
+import Services from './compnents/pages/Services/Services'
+import Products from './compnents/pages/Products/Products'
+import SignUp from './compnents/pages/SignUp/SignUp'
 
 function App() {
   return (
@@ -8,10 +13,13 @@ function App() {
     <Router>
         <Navbar />
         <Switch>
-          <Route path='/' />
+          <Route path='/' exact component={Home}/>
+          <Route path='/services' exact component={Services}/>
+          <Route path='/products' exact component={Products}/>
+          <Route path='/sign-up' exact component={SignUp}/>
         </Switch>
+        <Footer />
     </Router>
   );
 }
-
 export default App;
