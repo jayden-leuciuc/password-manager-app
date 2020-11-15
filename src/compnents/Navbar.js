@@ -27,8 +27,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <FaGraduationCap className='navbar-icon' />
-              WRKED
+              <img src="images/logo.png" alt="logo"/>
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -39,15 +38,7 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link
-                  to='/services'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Services
-                </Link>
-              </li>
+              
               <li className='nav-item'>
                 <Link
                   to='/products'
@@ -65,7 +56,7 @@ function Navbar() {
                 ) : (
                   <Link to='/sign-up' className='btn-link' >
                     <Button
-                      buttonStyle='btn--outline'
+                      buttonStyle='btn--primary'
                       buttonSize='btn--mobile'
                     >
                       SIGN UP

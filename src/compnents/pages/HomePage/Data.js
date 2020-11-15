@@ -16,14 +16,15 @@ export const homeObjOne = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: '100% SECURE',
-    headline: 'Stay protected 24/7 anywhere anytime',
+    topLine: 'Introducting SecureD',
+    topLineColorLight: true,
+    headline: 'Keep your passwords and identity safe online',
     description:
-      'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
-    buttonLabel: 'Learn More',
+      'If you use the same, easy to remember passwords, you are at risk.',
+    buttonLabel: 'Protect Me Now',
     imgStart: '',
-    img: 'images/svg-5.svg',
-    alt: 'Vault'
+    img: 'images/secure.svg',
+    alt: 'Surviellance'
   };
   
   export const homeObjThree = {
@@ -31,25 +32,27 @@ export const homeObjOne = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'EASY SETUP',
-    headline: 'Super fast and simple onboarding process',
+    topLineColorLight: true,
+    headline: 'Just remember one password!',
     description:
-      "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
-    buttonLabel: 'Start Now',
+      "Create one access key that you can remember, and the pain of password management is of the past!",
+    buttonLabel: 'Learn How',
     imgStart: 'start',
-    img: 'images/svg-7.svg',
-    alt: 'Vault'
+    img: 'images/security.svg',
+    alt: 'Security'
   };
   
   export const homeObjFour = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'DATA ANALYTICS',
-    headline: 'Every transaction is stored on our secure cloud database',
+    topLineColorLight: true,
+    topLine: 'AUTOFILL',
+    headline: 'Autofill passwords to make life simpler',
     description:
-      'Never ever have to worry again about saved reciepts. We store your data, so you can access it anytime.',
+      'Never have to worry about having to retype hard passwords to remember',
     buttonLabel: 'Sign Up Now',
-    imgStart: 'start',
-    img: 'images/svg-8.svg',
-    alt: 'Vault'
+    imgStart: '',
+    img: 'images/autofill.svg',
+    alt: 'Computer'
   };

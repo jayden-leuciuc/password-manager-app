@@ -12,8 +12,8 @@
 }
 
 .btn--primary {
-  background-color: var(--primary);
-  color: #242424;
+  background-color: #242424;
+  color: #fff;
   border: 1px solid var(--primary);
 }
 
@@ -77,10 +77,13 @@
   width: 100%;
 }
 
-.blue {
-  background-color: #276afb;
+.green {
+  background-color: #2c6e49;
   color: #fff;
   border: none;
+}
+.green:hover {
+  background-color: #242424;
 }
 
 .red {
@@ -99,14 +102,4 @@
   background-color: #fff;
   color: #242424;
   border: none;
-}
-
-.green {
-  background: #25ce4a;
-  color: #fff;
-  border: none;
-}
-
-.green:hover {
-  background-color: #242424;
 }

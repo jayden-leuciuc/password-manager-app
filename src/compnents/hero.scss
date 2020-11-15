@@ -32,13 +32,17 @@
 }
 
 .top-line {
-  color: #f00946;
+  color: black;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  &.blue {
+    color: blue;
+    background-color: transparent;
+  }
 }
 
 .heading {
@@ -54,7 +58,7 @@
 }
 
 .darkBg {
-  background-color: #1c2237;
+  background-color: #93c0a4;
 }
 
 .home__hero-subtitle {

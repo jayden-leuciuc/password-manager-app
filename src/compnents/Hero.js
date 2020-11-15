@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function HeroSection({
   lightBg,
   topLine,
+  topLineColorLight,
   lightText,
   lightTextDesc,
   headline,
@@ -30,7 +31,7 @@ function HeroSection({
           >
             <div className='col'>
               <div className='home__hero-text-wrapper'>
-                <div className='top-line'>{topLine}</div>
+                <div className={topLineColorLight ? 'top-line blue' : 'top-line'}>{topLine}</div>
                 <h1 className={lightText ? 'heading' : 'heading dark'}>
                   {headline}
                 </h1>
@@ -44,7 +45,7 @@ function HeroSection({
                   {description}
                 </p>
                 <Link to='/sign-up'>
-                  <Button buttonSize='btn--wide' buttonColor='blue'>
+                  <Button buttonSize='btn--wide' buttonColor='green'>
                     {buttonLabel}
                   </Button>
                 </Link>
