@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
-import { FaBars, FaTimes, FaGraduationCap } from 'react-icons/fa';
+import { MdFingerprint } from 'react-icons/md';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
 function Navbar() {
@@ -20,6 +21,14 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    showButton();
+    window.addEventListener('resize', showButton);
+    return (
+      window.removeEventListener('resize', showButton)
+    )
+})
+
 
   return (
     <>
@@ -27,7 +36,8 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <img src="images/logo.png" alt="logo"/>
+              <MdFingerprint className='navbar-icon' />
+              LAVISH
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -38,7 +48,15 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-              
+              <li className='nav-item'>
+                <Link
+                  to='/services'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Services
+                </Link>
+              </li>
               <li className='nav-item'>
                 <Link
                   to='/products'
@@ -50,14 +68,15 @@ function Navbar() {
               </li>
               <li className='nav-btn'>
                 {button ? (
-                  <Link to='/sign-up' className='btn-link' onClick={closeMobileMenu}>
+                  <Link to='/sign-up' className='btn-link'>
                     <Button buttonStyle='btn--outline'>SIGN UP</Button>
                   </Link>
                 ) : (
-                  <Link to='/sign-up' className='btn-link' >
+                  <Link to='/sign-up' className='btn-link'>
                     <Button
-                      buttonStyle='btn--primary'
+                      buttonStyle='btn--outline'
                       buttonSize='btn--mobile'
+                      onClick={closeMobileMenu}
                     >
                       SIGN UP
                     </Button>
